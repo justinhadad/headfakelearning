@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+    <META HTTP-EQUIV='CACHE-CONTROL' CONTENT='NO-CACHE'>
+    <meta name='rating' content='general'>
+    <link rel='stylesheet' href='/menu.css' type='text/css' media='screen' />
+    <link href='/rss/index.php' rel='alternate' type='application/rss+xml' title='News' />
+    <title>Physics Through Games</title>
+<style>
+
+* {box-sizing: border-box}
+body {
+  font-family: "Open Sans", sans-serif;
+  text-justify: inter-word;
+  margin-top: 50px;
+  margin-bottom: 100px;
+  margin-right: 80px;
+  margin-left: 80px;
+  display: flex;
+  justify-content: center;
+}
+
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #4B9CD3;
+  width: 515px;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/*li a:hover:not(.active) {
+  background-color: #111;
+}*/
+
+.active {
+  color: black;
+  background-color: white;
+}
+
+.tabcontent {
+  float: left;
+  padding: 0px 12px;
+  border: 2px ;
+  width: 50%;
+  border-left: none;
+  height: 300px;
+  max-width: 515px;
+}
+
+
+
+.filterDiv {
+  /*float: left;
+  background-color: #2196F3;
+  color: #ffffff;
+  width: 100px;
+  line-height: 100px;
+  text-align: center;
+  margin: 2px;
+  display: none; */
+}
+
+.show {
+  display: block;
+}
+
+.container {
+  overflow: hidden;
+  max-width: 515px;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+.btn.active {
+  background-color: #666;
+  color: white;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+  color: black;
+  text-align: center;
+}
+
+
+
+
+</style>
+<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+        <script>
+
+            $(document).ready(function() {
+                // set it up so that when the dropdown changes this event fires
+                $('#my-dropdown-a').change(function(eventObj) {
+                    // figure out the value that's currently selected in the dropdown
+                    var selected_value_a = $('#my-dropdown-a').val();
+
+                    // set a message depending on the selected value
+                    var message_a = 'unknown selection';
+                    if (selected_value_a == 'na') {
+                        message_a = '';
+                        } else if (selected_value_a == '01') {
+                        message_a = '<font face="verdana" size="2">AL</font>';
+                    }
+
+
+                    // put the message inside the my-data-div element
+                    $('#my-data-div-a').html(message_a);
+                });
+
+                $('#my-dropdown-b').change(function(eventObj) {
+                    // figure out the value that's currently selected in the dropdown
+                    var selected_value_a = $('#my-dropdown-b').val();
+
+                    // set a message depending on the selected value
+                    var message_a = 'unknown selection';
+                    if (selected_value_a == 'na') {
+                        message_a = '';
+                        } else if (selected_value_a == '01') {
+                        message_a = '<font face="verdana" size="2">Hat</font>';
+                    }
+
+
+                    // put the message inside the my-data-div element
+                    $('#my-data-div-b').html(message_a);
+                });
+
+                $('#my-dropdown-b').change(function(eventObj) {
+                    // figure out the value that's currently selected in the dropdown
+                    var selected_value_a = $('#my-dropdown-b').val();
+
+                    // set a message depending on the selected value
+                    var message_a = 'unknown selection';
+                    if (selected_value_a == 'na') {
+                        message_a = '';
+                        } else if (selected_value_a == '01') {
+                        message_a = '<font face="verdana" size="2">Hat</font>';
+                    }
+
+
+                    // put the message inside the my-data-div element
+                    $('#my-data-div-b').html(message_a);
+                });
+
+
+            });
+        </script>
+    </head>
+  <body>
+    <!-- main page content -->
+    <div id="content_div">
+      <!-- page header -->
+      <div id="header_div" style="background-color:#99badd;">
+
+<ul>
+  <li><a href="index.html">search</a></li>
+  <li><a href="about.html">about</a></li>
+  <li><a href="topics.html">topics</a></li>
+  <li style="float:right"><a class="active" href="games.html">games</a></li>
+</ul>
+
+</div>
+
+
+<div class="tabcontent">
+
+
+
+        <select id="my-dropdown-a" style="height: 22px; width: 143px; margin-top: 25px">
+            <option value="na"> / filter by subject</option>
+            <option value="01">physics</option>
+            <option value="02">economics</option>
+            <option value="03">math</option>
+        </select>
+
+        <div id='my-data-div-a'></div>
+
+        <select id="my-dropdown-b" style="height: 22px; width: 143px;  margin-top: 10px">
+            <option value="na"> / filter by grade level</option>
+            <option value="01">middle school</option>
+            <option value="02">high school</option>
+            <option value="03">college</option>
+        </select>
+
+        <div id='my-data-div-b'></div>
+
+        <select id="my-dropdown-c" style="height: 22px; width: 143px;margin-top: 10px">
+            <option value="na"> / filter by medium</option>
+            <option value="01">online</option>
+            <option value="02">in-person, no materials required</option>
+            <option value="03">in-person, materials required</option>
+        </select>
+
+        <div id='my-data-div-b'></div>
+
+<div style="margin-top: 18px" class="container">
+<!-- 
+  <a href="weakestlink.html" class="filterDiv math economics">Weakest Link</a>
+  <a href="dealornodeal.html" class="filterDiv economics math">Deal or No Deal</a>
+  <a href="password.html" class="filterDiv math">Password</a>
+  <a href="pyramid.html" class="filterDiv math">Pyramid</a>
+  <a href="wipeout.html" class="filterDiv physics">Wipeout</a>
+  <a href="wheel.html" class="filterDiv math economics">Wheel of Fortune</a>
+  <a href="jeopardy.html" class="filterDiv math economics">Jeopardy!</a>
+  <a href="21.html" class="filterDiv math">21</a>
+  <a href="voxpop.html" class="filterDiv math">Vox Pop</a>
+  <a href="64000.html" class="filterDiv math">$64,000 Question</a>
+  <a href="americangladiators.html" class="filterDiv fruits">American Gladiators</a>
+  <a href="beattheblock.html" class="filterDiv fruits">Beat the Clock</a>
+  <a href="cardsharks.html" class="filterDiv animals">Card Sharks</a>
+  <a href="letsmakeadeal.html" class="filterDiv animals">Let's Make a Deal</a>
+  <a href="survivor.html" class="filterDiv fruits">Survivor</a>
+  <a href="priceisright.html" class="filterDiv math animals">Price is Right</a>
+  <a href="greed.html" class="filterDiv math">Greed</a>
+  <a href="saleofthecentury.html" class="filterDiv math">Sale of the Century</a>
+  <a href="whatsyourbid.html" class="filterDiv fruits">What's Your Bid?</a>
+  <a href="lingo.html" class="filterDiv math">Lingo</div>
+  <a href="blackjack.html" class="filterDiv physics">Blackjack</div>
+ -->
+
+</div>
+
+
+<div class="footer">
+  <p>© 2020 justin hadad, daniel young, UNC Chapel Hill</p>
+</div>
+
+</div>
+
+<script>
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("filterDiv");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+
+
+
+</div>
+
+
+
+
+
+
+</body>
+
+
+</html>

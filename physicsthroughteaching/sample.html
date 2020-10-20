@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+        <script>
+
+            $(document).ready(function() {
+                // set it up so that when the dropdown changes this event fires
+                $('#my-dropdown-a').change(function(eventObj) {
+                    // figure out the value that's currently selected in the dropdown
+                    var selected_value_a = $('#my-dropdown-a').val();
+
+                    // set a message depending on the selected value
+                    var message_a = 'unknown selection';
+                    if (selected_value_a == 'na') {
+                        message_a = '';
+                        } else if (selected_value_a == '01') {
+                        message_a = '<font face="verdana" size="2">AL</font>';
+                    }
+
+
+                    // put the message inside the my-data-div element
+                    $('#my-data-div-a').html(message_a);
+                });
+
+                $('#my-dropdown-b').change(function(eventObj) {
+                    // figure out the value that's currently selected in the dropdown
+                    var selected_value_a = $('#my-dropdown-b').val();
+
+                    // set a message depending on the selected value
+                    var message_a = 'unknown selection';
+                    if (selected_value_a == 'na') {
+                        message_a = '';
+                        } else if (selected_value_a == '01') {
+                        message_a = '<font face="verdana" size="2">Hat</font>';
+                    }
+
+
+                    // put the message inside the my-data-div element
+                    $('#my-data-div-b').html(message_a);
+                });
+
+            });
+        </script>
+    </head>
+    <body>
+
+
+        <select id="my-dropdown-a" style="height: 22px; width: 143px;">
+            <option value="na">-- Select a state---</option>
+            <option value="01">Alabama</option>
+        </select>
+
+        <div id='my-data-div-a'></div>
+
+        <select id="my-dropdown-b" style="height: 22px; width: 143px;">
+            <option value="na">-- Select clothing---</option>
+            <option value="01">Hat</option>
+        </select>
+
+        <div id='my-data-div-b'></div>
+
+
+
+
+    </body>
+</html>

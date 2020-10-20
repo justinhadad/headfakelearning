@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+    <META HTTP-EQUIV='CACHE-CONTROL' CONTENT='NO-CACHE'>
+    <meta name='rating' content='general'>
+    <link rel='stylesheet' href='/menu.css' type='text/css' media='screen' />
+    <link href='/rss/index.php' rel='alternate' type='application/rss+xml' title='News' />
+    <title>Physics Through Games</title>
+<style>
+
+* {box-sizing: border-box}
+body {
+  font-family: "Open Sans", sans-serif;
+  text-justify: inter-word;
+  margin-top: 50px;
+  margin-bottom: 100px;
+  margin-right: 80px;
+  margin-left: 80px;
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+  color: black; /* White text */
+  padding: 12px 24px; /* Some padding */
+  margin-top: 18px;
+  margin-left: 100px;
+  cursor: pointer; /* Pointer/hand icon */
+  float: left; /* Float the buttons side by side */
+  padding: 0;
+  border: none;
+  background: none;
+  text-align:justify;
+  padding: 1.2em 1em 0;
+  margin:1em;
+}
+
+button:after {
+  content:'';
+  display:inline-block;
+  width:99.5%;/* generates an extra transparent line */
+}
+
+/* Add a background color on hover */
+button:hover {
+  color: blue;
+}
+
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #4B9CD3;
+  width: 515px;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/*li a:hover:not(.active) {
+  background-color: #111;
+}*/
+
+.active {
+  color: black;
+  background-color: white;
+}
+
+.tabcontent {
+  float: left;
+  padding: 0px 12px;
+  border: 2px ;
+  width: 50%;
+  border-left: none;
+  height: 300px;
+  width: 515px;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+  color: black;
+  text-align: center;
+}
+
+</style>
+
+<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+        <script>
+
+            $(document).ready(function() {
+                // set it up so that when the dropdown changes this event fires
+                $('#my-dropdown-a').change(function(eventObj) {
+                    // figure out the value that's currently selected in the dropdown
+                    var selected_value_a = $('#my-dropdown-a').val();
+
+                    // set a message depending on the selected value
+                    var message_a = 'unknown selection';
+                    if (selected_value_a == 'na') {
+                        message_a = '';
+                        } else if (selected_value_a == '01') {
+                        message_a = '<font face="verdana" size="2">AL</font>';
+                    }
+
+
+                    // put the message inside the my-data-div element
+                    $('#my-data-div-a').html(message_a);
+                });
+
+                $('#my-dropdown-b').change(function(eventObj) {
+                    // figure out the value that's currently selected in the dropdown
+                    var selected_value_a = $('#my-dropdown-b').val();
+
+                    // set a message depending on the selected value
+                    var message_a = 'unknown selection';
+                    if (selected_value_a == 'na') {
+                        message_a = '';
+                        } else if (selected_value_a == '01') {
+                        message_a = '<font face="verdana" size="2">Hat</font>';
+                    }
+
+
+                    // put the message inside the my-data-div element
+                    $('#my-data-div-b').html(message_a);
+                });
+
+                $('#my-dropdown-b').change(function(eventObj) {
+                    // figure out the value that's currently selected in the dropdown
+                    var selected_value_a = $('#my-dropdown-b').val();
+
+                    // set a message depending on the selected value
+                    var message_a = 'unknown selection';
+                    if (selected_value_a == 'na') {
+                        message_a = '';
+                        } else if (selected_value_a == '01') {
+                        message_a = '<font face="verdana" size="2">Hat</font>';
+                    }
+
+
+                    // put the message inside the my-data-div element
+                    $('#my-data-div-b').html(message_a);
+                });
+
+
+            });
+        </script>
+
+    </head>
+  <body>
+    <!-- main page content -->
+    <div id="content_div">
+      <!-- page header -->
+      <div id="header_div" style="background-color:#99badd;">
+
+<ul>
+  <li><a href="index.html">search</a></li>
+  <li><a href="about.html">about</a></li>
+  <li><a href="games.html">games</a></li>
+  <li style="float:right"><a class="active" href="topics.html">topics</a></li>
+</ul>
+
+</div>
+
+
+<div class="tabcontent">
+
+<p>Please use the drop down below to select the category of games you would like to investigate.
+
+<br>
+
+        <select id="my-dropdown-c" style="height: 22px; width: 143px;margin-top: 10px">
+            <option value="na"> / filter by medium</option>
+            <option value="01">math</option>
+            <option value="02">physics</option>
+            <option value="03">economics</option>
+        </select>
+
+        <div id='my-data-div-b'></div>
+
+<p> Affine spaces
+Affine transformations
+Agendas
+All pay auctions
+Bounded rationality
+Card counting
+Cheap talk
+Cooperative games
+Divorce decision
+Epistemic game theory
+Expected value
+Extensive form games
+First price auctions
+Gauge theories
+Hyperbolic discounting
+Kelly Criterion
+Large numbers…
+Lone Wolf / Rural Hospitals theorem
+Loss aversion
+Market design
+Matching
+Mechanism design
+Noncooperative games
+Normal form games
+One-sided matching
+Penny auctions
+Perfect Bayesian
+Pooling equilibria
+Prisoner’s dilemma
+Prospect theory
+Revenue Equivalence
+Risk aversion
+Second price auctions
+Secretary problem
+Separating equilibria
+Signaling
+St Petersburg Paradox
+Stable matching
+Time inconsistency
+Two-sided matching
+Utility functions
+Voting</p>
+
+</div>
+<div class="footer">
+  <p>© 2020 justin hadad, daniel young, UNC Chapel Hill</p>
+</div>
+
+
+
+
+</body>
+
+
+</html>
