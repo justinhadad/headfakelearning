@@ -22,7 +22,7 @@ body {
 }
 
 button {
-  
+
   font-family: "Open Sans", sans-serif;
   font-size: 20px;
   color: black; /* White text */
@@ -100,6 +100,83 @@ li a {
   color: black;
   text-align: center;
 }
+
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+.btn.active {
+  background-color: #666;
+  color: white;
+}
+
+.footer {
+  /*position: fixed;*/
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+  color: black;
+  text-align: center;
+}
+
+.dropbtn {
+  background-color: #3498DB;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Dropdown button on hover & focus */
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #2980B9;
+}
+
+/* The container <div> - needed to position the dropdown content */
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+
+.dropdown-content a:hover {background-color: #ddd}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+
+.show {display:block;}
 
 </style>
 
@@ -194,7 +271,7 @@ li a {
         </select>
 
         <div id='my-data-div-b'></div>
-
+<!--
 <p> Affine spaces
 Affine transformations
 Agendas
@@ -236,9 +313,37 @@ Stable matching
 Time inconsistency
 Two-sided matching
 Utility functions
-Voting</p>
+Voting</p>-->
+<div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn">List of Games</button>
+  <div id="myDropdown" class="dropdown-content">
+
+    <a href="weakestlink.html" class="filterDiv math economics">Affine spaces</a>
+    <a href="dealornodeal.html" class="filterDiv economics math">Affine transformations</a>
+    <a href="password.html" class="filterDiv math">Agendas</a>
+    <a href="pyramid.html" class="filterDiv math">All pay auctions</a>
+    <a href="wipeout.html" class="filterDiv physics">Bounded rationality</a>
+    <a href="wheel.html" class="filterDiv math economics">Card counting</a>
+    <a href="jeopardy.html" class="filterDiv math economics">Cheap talk</a>
+    <a href="21.html" class="filterDiv math">Cooperative games</a>
+    <a href="voxpop.html" class="filterDiv math">Divorce decision</a>
+    <a href="64000.html" class="filterDiv math">Epistemic game theory</a>
+    <a href="americangladiators.html" class="filterDiv fruits">Expected value</a>
+    <a href="beattheblock.html" class="filterDiv fruits">Extensive form games</a>
+    <a href="cardsharks.html" class="filterDiv animals">First price auctions</a>
+    <a href="letsmakeadeal.html" class="filterDiv animals">Gauge theories</a>
+    <a href="survivor.html" class="filterDiv fruits">Hyperbolic discounting</a>
+    <a href="priceisright.html" class="filterDiv math animals">Kelly Criterion</a>
+    <a href="greed.html" class="filterDiv math">Large numbers…</a>
+    <a href="saleofthecentury.html" class="filterDiv math">Lone Wolf / Rural Hospitals theorem</a>
+    <a href="whatsyourbid.html" class="filterDiv fruits">Loss aversion</a>
+    <a href="lingo.html" class="filterDiv math">Market design</a>
+    <a href="blackjack.html" class="filterDiv physics">Matching</a>
+
+  </div>
 
 </div>
+
 <div class="footer">
   <p>© 2020 justin hadad, daniel young, UNC Chapel Hill</p>
 </div>
